@@ -2,8 +2,9 @@ import json
 from pydantic import BaseModel, create_model
 
 # Read JSON file
-with open('sample.json', 'r') as file:
-    data = json.load(file)
+def read_json(file_name):
+    with open('sample.json', 'r') as file:
+        data = json.load(file)
 
 # Function to convert JSON schema to Pydantic model
 def generate_pydantic_model(class_name, schema):
@@ -20,6 +21,8 @@ def generate_pydantic_model(class_name, schema):
     print(pydantic_model)
     return pydantic_model
 
+if __name__ == "__main__"
+    read_json()
 # Create Pydantic models from JSON
 generated_models = {}
 for class_name, schema in data.items():
