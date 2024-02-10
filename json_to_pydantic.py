@@ -14,13 +14,11 @@ def generate_pydantic_model(class_name, schema):
             properties[prop_name] = (str, ...)
         elif prop_type == 'integer':
             properties[prop_name] = (int, ...)
-        # Extend this logic for other types as needed
 
     pydantic_model = create_model(class_name, **properties)
     print(pydantic_model)
     return pydantic_model
 
-# Create Pydantic models from JSON
 generated_models = {}
 for class_name, schema in data.items():
     print(schema)
