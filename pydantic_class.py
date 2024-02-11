@@ -1,6 +1,7 @@
 from pydantic import BaseModel, Field
 from guardrails.validators import ValidRange
 from typing import List
+import time
 
 class CompanyInfo(BaseModel):
   name: str = Field(description = "Name of the company the applicant has worked with")
