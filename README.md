@@ -5,4 +5,3 @@ Structure
 
 Process
 1. Convert admin data into rail spec or pydantic class
-2. 
